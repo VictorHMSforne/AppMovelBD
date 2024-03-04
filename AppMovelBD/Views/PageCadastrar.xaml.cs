@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppMovelBD.Controller;//adicionei
 
 namespace AppMovelBD
 {
@@ -15,6 +16,13 @@ namespace AppMovelBD
         public PageCadastrar()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrar_Clicked(object sender, EventArgs e)
+        {
+            MySQLCon.InserirPessoa(txtNome.Text, txtIdade.Text, txtCidade.Text);
+            DisplayAlert("Inserção", "Pessoa Cadastrada com sucesso!", "Ok");
+            Navigation.PushAsync(new PageListar()); //Pesquisar o  que é o PushAsync
         }
     }
 }

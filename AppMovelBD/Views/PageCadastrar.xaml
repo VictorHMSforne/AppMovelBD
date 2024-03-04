@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMovelBD.PageCadastrar">
+             x:Class="AppMovelBD.PageCadastrar" Title="Cadastro De Pessoa">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Nome: " FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="txtNome" Keyboard="Default" Placeholder="Digite o nome da Pessoa"/>
+            <Label Text="Idade" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="txtIdade" Keyboard="Numeric"/>
+            <Label Text="Cidade" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="txtCidade" Keyboard="Default" Placeholder="Digite a cidade da pessoa"/>
+            <StackLayout HorizontalOptions="Center">
+                <Button x:Name="btnCadastrar" Text="Cadastrar" BackgroundColor="White" TextColor="Black" Clicked="btnCadastrar_Clicked"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

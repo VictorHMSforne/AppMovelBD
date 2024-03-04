@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMovelBD.PageUpDel">
+             x:Class="AppMovelBD.PageUpDel" Title="Editar / Apagar">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Nome: " FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="txtNome" Keyboard="Default" Text="{Binding nome, Mode=TwoWay}"/> <!--pesquisar o que é TwoAway-->
+            <Label Text="Idade: " FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="txtIdade" Keyboard="Default" Text="{Binding idade, Mode=TwoWay}"/>
+            <Label Text="Cidade: " FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="txtCidade" Keyboard="Default" Text="{Binding cidade, Mode=TwoWay}"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnAtualizar" Text="Atualizar" BackgroundColor="#48D1CC" TextColor="Black" FontAttributes="Bold" Clicked="btnAtualizar_Clicked"/>
+                <Button x:Name="btnExcluir" Text="Excluir" BackgroundColor="Red" TextColor="Black" FontAttributes="Bold" Clicked="btnExcluir_Clicked"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

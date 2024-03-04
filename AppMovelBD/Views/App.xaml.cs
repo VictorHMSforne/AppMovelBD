@@ -10,7 +10,7 @@ namespace AppMovelBD
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());//pesquisar dps o que é NavigationPage
         }
 
         protected override void OnStart()
